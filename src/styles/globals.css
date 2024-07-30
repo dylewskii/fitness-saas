@@ -4,56 +4,55 @@
 
 @layer base {
   :root {
-    --primary: hsl(56, 48%, 45%);
-    --primary-content: hsl(0, 0%, 0%);
-    --primary-dark: hsl(56, 48%, 35%);
-    --primary-light: hsl(56, 48%, 55%);
+    --primary: 56 48% 45%;
+    --primary-content: 0 0% 0%;
+    --primary-dark: 56, 48%, 35%;
+    --primary-light: 56, 48%, 55%;
 
-    --secondary: hsl(46, 48%, 45%);
-    --secondary-content: hsl(0, 0%, 0%);
-    --secondary-dark: hsl(46, 48%, 35%);
-    --secondary-light: hsl(46, 48%, 55%);
+    --secondary: 46, 48%, 45%;
+    --secondary-content: 0, 0%, 0%;
+    --secondary-dark: 46, 48%, 35%;
+    --secondary-light: 46, 48%, 55%;
 
-    --background: hsl(60, 7%, 94%);
-    --foreground: hsl(0, 0%, 98%);
-    --border: hsl(48, 8%, 88%);
+    --background: 60, 7%, 94%;
+    --foreground: 0, 0%, 98%;
+    --border: 48, 8%, 8%;
+    --copy: 60, 8%, 15%;
+    --copy-light: 56, 8%, 40%;
+    --copy-lighter: 56, 7%, 55%;
 
-    --copy: hsl(60, 8%, 15%);
-    --copy-light: hsl(56, 8%, 40%);
-    --copy-lighter: hsl(56, 7%, 55%);
-
-    --success: hsl(120, 48%, 45%);
-    --warning: hsl(60, 48%, 45%);
-    --error: hsl(0, 48%, 45%);
-    --success-content: hsl(120, 48%, 95%);
-    --warning-content: hsl(0, 0%, 0%);
-    --error-content: hsl(0, 48%, 95%);
+    --success: 120, 48%, 45%;
+    --warning: 60, 48%, 45%;
+    --error: 0, 48%, 45%;
+    --success-content: 120, 48%, 95%;
+    --warning-content: 0, 0%, 0%;
+    --error-content: 0, 48%, 95%;
   }
 
   .dark {
-    --primary: hsl(56, 48%, 45%);
-    --primary-content: hsl(0, 0%, 0%);
-    --primary-dark: hsl(56, 48%, 35%);
-    --primary-light: hsl(56, 48%, 55%);
+    --primary: 56, 48%, 45%;
+    --primary-content: 0, 0%, 0%;
+    --primary-dark: 56, 48%, 35%;
+    --primary-light: 56, 48%, 55%;
 
-    --secondary: hsl(46, 48%, 45%);
-    --secondary-content: hsl(0, 0%, 0%);
-    --secondary-dark: hsl(46, 48%, 35%);
-    --secondary-light: hsl(46, 48%, 55%);
+    --secondary: 46, 48%, 45%;
+    --secondary-content: 0, 0%, 0%;
+    --secondary-dark: 46, 48%, 35%;
+    --secondary-light: 46, 48%, 55%;
 
-    --background: hsl(60, 6%, 10%);
-    --foreground: hsl(60, 8%, 15%);
-    --border: hsl(54, 8%, 25%);
+    --background: 60, 6%, 10%;
+    --foreground: 60, 8%, 15%;
+    --border: 54, 8%, 25%;
 
-    --copy: hsl(0, 0%, 98%);
-    --copy-light: hsl(50, 8%, 85%);
-    --copy-lighter: hsl(55, 7%, 65%);
+    --copy: 0, 0%, 98%;
+    --copy-light: 50, 8%, 85%;
+    --copy-lighter: 55, 7%, 65%;
 
-    --success: hsl(120, 48%, 45%);
-    --warning: hsl(60, 48%, 45%);
-    --error: hsl(0, 48%, 45%);
-    --success-content: hsl(120, 48%, 95%);
-    --warning-content: hsl(0, 0%, 0%);
-    --error-content: hsl(0, 48%, 95%);
+    --success: 120, 48%, 45%;
+    --warning: 60, 48%, 45%;
+    --error: 0, 48%, 45%;
+    --success-content: 120, 48%, 95%;
+    --warning-content: 0, 0%, 0%;
+    --error-content: 0, 48%, 95%;
   }
 }

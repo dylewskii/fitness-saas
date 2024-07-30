@@ -1,9 +1,5 @@
-import { HydrateClient } from "~/trpc/server";
-
 export default async function Home() {
   return (
-    <HydrateClient>
-      <main className="text-copy bg-background flex min-h-screen flex-col items-center justify-center"></main>
-    </HydrateClient>
+    <main className="text-copy bg-background flex min-h-screen flex-col items-center justify-center rounded-t-3xl"></main>
   );
 }
