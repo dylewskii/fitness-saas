@@ -43,6 +43,9 @@ export default {
           content: "hsl(var(--error-content))",
         },
       },
+      borderRadius: {
+        "4xl": "3rem",
+      },
     },
   },
   plugins: [],
