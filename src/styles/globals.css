@@ -1,3 +1,59 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: hsl(56, 48%, 45%);
+    --primary-content: hsl(0, 0%, 0%);
+    --primary-dark: hsl(56, 48%, 35%);
+    --primary-light: hsl(56, 48%, 55%);
+
+    --secondary: hsl(46, 48%, 45%);
+    --secondary-content: hsl(0, 0%, 0%);
+    --secondary-dark: hsl(46, 48%, 35%);
+    --secondary-light: hsl(46, 48%, 55%);
+
+    --background: hsl(60, 7%, 94%);
+    --foreground: hsl(0, 0%, 98%);
+    --border: hsl(48, 8%, 88%);
+
+    --copy: hsl(60, 8%, 15%);
+    --copy-light: hsl(56, 8%, 40%);
+    --copy-lighter: hsl(56, 7%, 55%);
+
+    --success: hsl(120, 48%, 45%);
+    --warning: hsl(60, 48%, 45%);
+    --error: hsl(0, 48%, 45%);
+    --success-content: hsl(120, 48%, 95%);
+    --warning-content: hsl(0, 0%, 0%);
+    --error-content: hsl(0, 48%, 95%);
+  }
+
+  .dark {
+    --primary: hsl(56, 48%, 45%);
+    --primary-content: hsl(0, 0%, 0%);
+    --primary-dark: hsl(56, 48%, 35%);
+    --primary-light: hsl(56, 48%, 55%);
+
+    --secondary: hsl(46, 48%, 45%);
+    --secondary-content: hsl(0, 0%, 0%);
+    --secondary-dark: hsl(46, 48%, 35%);
+    --secondary-light: hsl(46, 48%, 55%);
+
+    --background: hsl(60, 6%, 10%);
+    --foreground: hsl(60, 8%, 15%);
+    --border: hsl(54, 8%, 25%);
+
+    --copy: hsl(0, 0%, 98%);
+    --copy-light: hsl(50, 8%, 85%);
+    --copy-lighter: hsl(55, 7%, 65%);
+
+    --success: hsl(120, 48%, 45%);
+    --warning: hsl(60, 48%, 45%);
+    --error: hsl(0, 48%, 45%);
+    --success-content: hsl(120, 48%, 95%);
+    --warning-content: hsl(0, 0%, 0%);
+    --error-content: hsl(0, 48%, 95%);
+  }
+}
