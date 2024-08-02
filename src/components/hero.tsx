@@ -3,14 +3,14 @@ import ExerciseCard from "./exercise-card";
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col py-6 sm:flex-row sm:justify-between sm:px-16 sm:py-14 md:justify-center md:px-32">
-      <div className="mx-auto px-8 py-6 sm:m-0 sm:my-auto">
+    <section className="flex flex-col py-6 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-16 sm:py-14">
+      <div className="mx-auto px-8 py-6 sm:my-auto sm:p-0">
         <h1 className="bg-background block text-3xl font-bold sm:my-auto md:text-4xl">
           Focus on your club. <br />
           We&apos;ll take care of the rest.
         </h1>
 
-        <div className="flex items-center justify-center gap-2 py-6 sm:justify-start md:flex-row">
+        <div className="flex items-center justify-center gap-2 py-6 sm:flex-col sm:items-start md:flex-row">
           <button className="bg-secondary text-copy group relative flex min-w-fit items-center gap-1 rounded-3xl border-2 border-black px-4 py-2 font-bold hover:bg-[hsl(46,48%,45%)]/80 md:px-[1rem] md:py-[0.5rem] md:text-xl">
             Try It Free
             <svg
@@ -62,8 +62,11 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="bg-background absolute top-[14rem] w-full rounded-b-3xl p-4 sm:hidden"></div>
-      <ExerciseCard />
+      <div className="relative">
+        <div className="bg-background absolute -top-4 z-50 w-full rounded-b-3xl p-4 sm:hidden"></div>
+        <ExerciseCard className="z-0" />
+        <div className="bg-background absolute -bottom-4 z-50 w-full rounded-t-3xl p-4 sm:hidden"></div>
+      </div>
     </section>
   );
 }
