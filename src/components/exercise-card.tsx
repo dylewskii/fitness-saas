@@ -4,7 +4,7 @@ import swingingKettlebell from "public/swinging-kettlebell.webp";
 
 export default function ExerciseCard() {
   return (
-    <div className="sm:rounded-4xl h-[24rem] w-full overflow-hidden sm:h-[16rem] sm:w-[16rem]">
+    <div className="sm:rounded-4xl my-auto h-[24rem] w-full overflow-hidden sm:h-[12rem] sm:w-[16rem]">
       <Image
         src={swingingKettlebell}
         alt="A man swinging a kettlebell upwards."

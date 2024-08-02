@@ -3,14 +3,15 @@ import ExerciseCard from "./exercise-card";
 
 export default function Hero() {
   return (
-    <section className="relative mt-10 flex flex-col sm:flex-row sm:justify-between sm:px-6 sm:py-4">
-      <div className="mx-auto sm:m-0 sm:my-auto">
-        <h1 className="bg-background text-3xl font-bold sm:my-auto">
+    <section className="relative flex flex-col py-6 sm:flex-row sm:justify-between sm:px-16 sm:py-14 md:justify-center md:px-32">
+      <div className="mx-auto px-8 py-6 sm:m-0 sm:my-auto">
+        <h1 className="bg-background block text-3xl font-bold sm:my-auto md:text-4xl">
           Focus on your club. <br />
           We&apos;ll take care of the rest.
         </h1>
-        <div className="my-4 flex items-center justify-center gap-2">
-          <button className="bg-secondary text-copy group flex items-center gap-1 rounded-3xl border-2 border-black px-4 py-2 font-bold hover:bg-[hsl(46,48%,45%)]/80">
+
+        <div className="flex items-center justify-center gap-2 py-6 sm:justify-start md:flex-row">
+          <button className="bg-secondary text-copy group relative flex min-w-fit items-center gap-1 rounded-3xl border-2 border-black px-4 py-2 font-bold hover:bg-[hsl(46,48%,45%)]/80 md:px-[1rem] md:py-[0.5rem] md:text-xl">
             Try It Free
             <svg
               className="flex h-4 w-4 items-center transition group-hover:translate-x-1"
@@ -26,11 +27,22 @@ export default function Hero() {
                 strokeLinejoin="round"
               />
             </svg>
-            <span className="absolute -left-2 top-1 -z-10 rounded-3xl bg-black px-4 py-2">
-              Try it Free
-            </span>
+            <svg
+              className="absolute -right-1 -top-2 h-6 w-6"
+              viewBox="0 0 24 24"
+              fill="white"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2L10.6985 7.20599C10.4445 8.22185 10.3176 8.72978 10.0531 9.14309C9.81915 9.50868 9.50868 9.81915 9.14309 10.0531C8.72978 10.3176 8.22185 10.4445 7.20599 10.6985L2 12L7.20599 13.3015C8.22185 13.5555 8.72978 13.6824 9.14309 13.9469C9.50868 14.1808 9.81915 14.4913 10.0531 14.8569C10.3176 15.2702 10.4445 15.7782 10.6985 16.794L12 22L13.3015 16.794C13.5555 15.7782 13.6824 15.2702 13.9469 14.8569C14.1808 14.4913 14.4913 14.1808 14.8569 13.9469C15.2702 13.6824 15.7782 13.5555 16.794 13.3015L22 12L16.794 10.6985C15.7782 10.4445 15.2702 10.3176 14.8569 10.0531C14.4913 9.81915 14.1808 9.50868 13.9469 9.14309C13.6824 8.72978 13.5555 8.22185 13.3015 7.20599L12 2Z"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </button>
-          <button className="group flex items-center gap-1 rounded-3xl border-2 border-zinc-500 bg-zinc-200 px-4 py-2">
+          <button className="group flex min-w-fit items-center gap-1 rounded-3xl border-2 border-zinc-500 bg-zinc-200 px-4 py-2 md:px-[1rem] md:py-[0.5rem] md:text-xl">
             Learn More
             <svg
               className="h-4 w-4 transition group-hover:scale-110"
@@ -50,7 +62,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="bg-background absolute top-[9rem] z-10 w-full rounded-b-3xl p-2 sm:hidden"></div>
+      <div className="bg-background absolute top-[14rem] w-full rounded-b-3xl p-4 sm:hidden"></div>
       <ExerciseCard />
     </section>
   );
