@@ -4,7 +4,7 @@ import ExerciseCard from "./exercise-card";
 export default function Hero() {
   return (
     <section className="flex flex-col py-6 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-16 sm:py-14">
-      <div className="mx-auto px-8 py-6 sm:my-auto sm:p-0">
+      <div className="mx-auto px-8 py-12 sm:my-auto sm:p-0">
         <h1 className="bg-background block text-3xl font-bold sm:my-auto md:text-4xl">
           Focus on your club. <br />
           We&apos;ll take care of the rest.
