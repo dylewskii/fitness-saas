@@ -16,7 +16,7 @@ export default function FeatureOverview() {
       </div>
 
       <div className="bg-primary flex flex-col items-center justify-center px-12 py-24">
-        <p className="mb-4 text-2xl font-bold">What&apos;s Included: </p>
+        <p className="pb-4 text-2xl font-bold">What&apos;s Included: </p>
         <ul className="mx-auto max-w-2xl space-y-2 px-4 pt-6">
           <li>
             <strong>Subscription Tracking:</strong> Monitor active and expired

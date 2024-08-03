@@ -1,6 +1,7 @@
 import CTAPanel from "~/components/cta-panel";
 import Hero from "../components/hero";
 import FeatureOverview from "~/components/feature-overview";
+import ProcessBreakdown from "~/components/process-breakdown";
 
 export default async function Home() {
   return (
@@ -8,6 +9,7 @@ export default async function Home() {
       <Hero />
       <CTAPanel />
       <FeatureOverview />
+      <ProcessBreakdown />
     </main>
   );
 }
