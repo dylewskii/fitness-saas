@@ -18,25 +18,25 @@ export default function FeatureOverview() {
       <div className="bg-primary flex flex-col items-center justify-center px-12 py-24">
         <p className="pb-4 text-2xl font-bold">What&apos;s Included: </p>
         <ul className="mx-auto max-w-2xl space-y-2 px-4 pt-6">
-          <li>
-            <strong>Subscription Tracking:</strong> Monitor active and expired
-            memberships at a glance.
+          <li className="py-4">
+            📆 <strong className="pl-1">Subscription Tracking:</strong> Monitor
+            active and expired memberships at a glance.
           </li>
-          <li>
-            <strong>Payment Management:</strong> Easily check payment status and
-            send reminders.
+          <li className="py-4">
+            💵 <strong className="pl-1">Payment Management:</strong> Easily
+            check payment status and send reminders.
           </li>
-          <li>
-            <strong>Package Overview:</strong> View and manage client-specific
-            training packages.
+          <li className="py-4">
+            📦 <strong className="pl-1">Package Overview: </strong> View and
+            manage client-specific training packages.
           </li>
-          <li>
-            <strong>Reporting:</strong> Generate insightful reports on revenue
-            and membership trends.
+          <li className="py-4">
+            📊 <strong className="pl-1">Reporting:</strong> Generate insightful
+            reports on revenue and membership trends.
           </li>
-          <li>
-            <strong>Client Portal:</strong> Allow clients to view their
-            subscription status and make payments.
+          <li className="py-4">
+            🖥️ <strong className="pl-1">Client Portal:</strong> Allow clients to
+            view their subscription status and make payments.
           </li>
         </ul>
       </div>
