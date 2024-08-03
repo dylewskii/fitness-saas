@@ -1,5 +1,6 @@
 import { type Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
+import plugin from "tailwindcss/plugin";
 
 export default {
   content: ["./src/**/*.tsx"],
@@ -46,7 +47,30 @@ export default {
       borderRadius: {
         "4xl": "3rem",
       },
+      keyframes: {
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        "infinite-scroll-bar": "scroll 40s linear infinite",
+      },
     },
   },
-  plugins: [],
+  variants: {
+    extend: {
+      animationPlayState: ["hover", "group-hover"],
+    },
+  },
+  plugins: [
+    // eslint-disable-next-line @typescript-eslint/unbound-method
+    plugin(({ addUtilities }) => {
+      addUtilities({
+        ".pause": {
+          "animation-play-state": "paused",
+        },
+      });
+    }),
+  ],
 } satisfies Config;
