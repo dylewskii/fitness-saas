@@ -14,7 +14,10 @@
     --secondary-dark: 46, 48%, 35%;
     --secondary-light: 46, 48%, 55%;
 
+    /* option 1 */
     --background: 60, 7%, 94%;
+    /* option 2 */
+    /* --background: 240, 100%, 99%; */
     --foreground: 0, 0%, 98%;
     --border: 48, 8%, 8%;
     --copy: 60, 8%, 15%;
