@@ -9,7 +9,7 @@ type TopNavProps = {
 export function TopNav({ className }: TopNavProps) {
   return (
     <nav
-      className={`${className} bg-primary flex w-full max-w-[1920px] items-center justify-between p-4`}
+      className={`${className} bg-primary flex w-full max-w-[1920px] items-center justify-between px-12 py-4`}
     >
       <div className="flex items-center text-xl font-bold">
         <svg
