@@ -5,6 +5,7 @@ import { type Metadata } from "next";
 
 import { ClerkProvider } from "@clerk/nextjs";
 import { TopNav } from "../components/topnav";
+import Footer from "~/components/footer";
 
 export const metadata: Metadata = {
   title: "Fitness SaaS",
@@ -24,6 +25,7 @@ export default function RootLayout({
         <body>
           <TopNav />
           {children}
+          <Footer />
         </body>
       </html>
     </ClerkProvider>
