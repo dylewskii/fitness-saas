@@ -17,7 +17,7 @@ export default function ExerciseSlider() {
   return (
     <div className="overflow-hidden bg-black font-bold text-gray-300">
       <div className="animate-infinite-scroll-bar hover:pause inline-flex">
-        <ul className="flex gap-4 py-4 pr-4 uppercase">
+        <ul className="flex gap-4 py-4 pr-4 uppercase" aria-hidden>
           {duplicatedSports.map((sport, i) => (
             <li
               key={`${sport + i}`}
