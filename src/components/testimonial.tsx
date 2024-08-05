@@ -6,7 +6,7 @@ export default function Testimonial() {
       <div className="mx-auto max-w-2xl lg:max-w-4xl">
         {/* LOGO HERE? */}
         <figure className="mt-10">
-          <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
+          <blockquote className="text-center text-2xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
             <p>
               &#34;No more spreadsheet nightmares! This app has made tracking
               payments and subscriptions a breeze.&#34;
@@ -14,7 +14,7 @@ export default function Testimonial() {
           </blockquote>
           <figcaption className="mt-10">
             <div className="mt-4 flex items-center justify-center space-x-3 text-base">
-              <div className="font-semibold text-gray-900">Denny M.</div>
+              <div className="font-semibold text-gray-900">Denzel W.</div>
               <svg
                 width={3}
                 height={3}
@@ -25,7 +25,7 @@ export default function Testimonial() {
                 <circle r={1} cx={1} cy={1} />
               </svg>
               <div className="text-gray-600">
-                Head Coach @ NewSparta Academy
+                Head Coach @ Gladiator Academy
               </div>
             </div>
           </figcaption>

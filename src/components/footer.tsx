@@ -6,8 +6,7 @@ export default function Footer() {
   const currYear = new Date().getFullYear();
   return (
     <footer className="w-full bg-white">
-      <Newsletter />
-      <div className="mx-auto px-12 py-12">
+      <div className="mx-auto border-t-2 px-12 py-12">
         <svg
           className="ml-4 h-8 w-8"
           xmlns="http://www.w3.org/2000/svg"
@@ -33,6 +32,7 @@ export default function Footer() {
         </svg>
         <p className="text-xl font-bold">Let&apos;s grow your club</p>
       </div>
+      <Newsletter />
       <div className="bg-primary flex justify-between px-12 py-8">
         <div className="">
           <p>&copy;{currYear} Fitnessio</p>

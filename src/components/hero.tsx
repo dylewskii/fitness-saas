@@ -1,16 +1,18 @@
 import React from "react";
-import ExerciseCard from "./exercise-card";
+import ImageCard from "./image-card";
+import imageOne from "../../public/swinging-kettlebell.webp";
+import imageTwo from "../../public/workout-two.webp";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col py-6 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-16 sm:py-14">
-      <div className="mx-auto px-8 py-12 sm:my-auto sm:p-0">
-        <h1 className="bg-background block text-3xl font-bold sm:my-auto md:text-4xl">
+    <section className="flex flex-col py-6 sm:px-16 sm:py-14">
+      <div className="max-w-[970px] px-8 py-12 sm:my-auto sm:p-0">
+        <h1 className="bg-background block text-[2.25rem] font-bold sm:my-auto md:text-[4rem]">
           Focus on your club. <br />
           We&apos;ll take care of the rest.
         </h1>
 
-        <div className="flex items-center justify-center gap-2 py-6 sm:flex-col sm:items-start md:flex-row">
+        <div className="flex items-center justify-center gap-2 py-6 sm:flex-col sm:items-start md:flex-row md:justify-start">
           <button className="bg-secondary text-copy group relative flex min-w-fit items-center gap-1 rounded-3xl border-2 border-black px-4 py-2 font-bold hover:bg-[hsl(46,48%,45%)]/80 md:px-[1rem] md:py-[0.5rem] md:text-xl">
             Try It Free
             <svg
@@ -64,8 +66,20 @@ export default function Hero() {
 
       <div className="relative">
         <div className="bg-background absolute -top-4 z-50 w-full rounded-b-3xl p-4 sm:hidden"></div>
-        <ExerciseCard className="z-0" />
-        <div className="bg-background absolute -bottom-4 z-50 w-full rounded-t-3xl p-4 sm:hidden"></div>
+        <div className="relative h-[24rem] sm:mt-[4rem]">
+          <ImageCard
+            className="z-10 h-full w-full sm:absolute sm:right-48 sm:top-0 sm:h-[14rem] sm:w-[14rem] lg:h-[20rem] lg:w-[20rem]"
+            src={imageOne}
+            alt="A man holding a kettlebell above his head."
+          />
+          <ImageCard
+            className="z-0 hidden sm:absolute sm:-top-14 sm:right-16 sm:block sm:h-[14rem] sm:w-[14rem] lg:h-[20rem] lg:w-[20rem]"
+            src={imageTwo}
+            alt="A man holding a kettlebell in the air whilst doing a side plank."
+          />
+        </div>
+
+        <div className="bg-background absolute -bottom-36 z-50 w-full rounded-t-3xl p-4 sm:hidden"></div>
       </div>
     </section>
   );

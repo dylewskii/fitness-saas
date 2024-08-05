@@ -7,7 +7,7 @@ import ExerciseSlider from "~/components/exercise-slider";
 
 export default async function Home() {
   return (
-    <main className="text-copy bg-background flex min-h-screen w-[100%] flex-col overflow-x-hidden rounded-t-3xl">
+    <main className="text-copy bg-background flex min-h-screen w-[100%] flex-col gap-[5rem] overflow-x-hidden rounded-t-3xl">
       <Hero />
       <CTAPanel />
       <FeatureOverview />
