@@ -2,6 +2,7 @@ import React from "react";
 import ImageCard from "./image-card";
 import imageOne from "../../public/swinging-kettlebell.webp";
 import imageTwo from "../../public/workout-two.webp";
+import Button from "./ui/button";
 
 export default function Hero() {
   return (
@@ -13,7 +14,7 @@ export default function Hero() {
         </h1>
 
         <div className="flex items-center justify-center gap-2 py-6 sm:flex-col sm:items-start md:flex-row md:justify-start">
-          <button className="bg-secondary text-copy group relative flex min-w-fit items-center gap-1 rounded-3xl border-2 border-black px-4 py-2 font-bold hover:bg-[hsl(46,48%,45%)]/80 md:px-[1rem] md:py-[0.5rem] md:text-xl">
+          <Button variant="primary">
             Try It Free
             <svg
               className="flex h-4 w-4 items-center transition group-hover:translate-x-1"
@@ -43,8 +44,8 @@ export default function Hero() {
                 strokeLinejoin="round"
               />
             </svg>
-          </button>
-          <button className="group flex min-w-fit items-center gap-1 rounded-3xl border-2 border-zinc-500 bg-zinc-200 px-4 py-2 md:px-[1rem] md:py-[0.5rem] md:text-xl">
+          </Button>
+          <Button variant="secondary">
             Learn More
             <svg
               className="h-4 w-4 transition group-hover:scale-110"
@@ -60,7 +61,7 @@ export default function Hero() {
                 strokeLinejoin="round"
               />
             </svg>
-          </button>
+          </Button>
         </div>
       </div>
 
