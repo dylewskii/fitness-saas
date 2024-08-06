@@ -17,13 +17,13 @@ export default function Hero() {
           <Button variant="primary">
             Try It Free
             <svg
-              className="flex h-4 w-4 items-center transition group-hover:translate-x-1"
+              className="flex h-4 w-4 items-center transition group-hover:-translate-y-[2px] group-hover:translate-x-[2px]"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M4 12H20M20 12L14 6M20 12L14 18"
+                d="M7 17L17 7M17 7H7M17 7V17"
                 stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"
