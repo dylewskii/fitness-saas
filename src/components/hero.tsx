@@ -79,7 +79,7 @@ export default function Hero() {
           />
         </div>
 
-        <div className="bg-background absolute -bottom-36 z-50 w-full rounded-t-3xl p-4 sm:hidden"></div>
+        <div className="bg-background absolute bottom-0 z-50 w-full rounded-t-3xl p-4 sm:hidden"></div>
       </div>
     </section>
   );
