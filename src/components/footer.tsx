@@ -8,7 +8,7 @@ export default function Footer() {
       <div>Fitnessio Logo</div>
 
       <div className="flex items-center gap-4">
-        <Link href={"/terms"} className="transition hover:text-white">
+        <Link href={"/about"} className="transition hover:text-white">
           About
         </Link>
         <Link href={"/features"} className="transition hover:text-white">
@@ -20,7 +20,7 @@ export default function Footer() {
         <Link href={"/help"} className="transition hover:text-white">
           Help
         </Link>
-        <Link href={"/help"} className="transition hover:text-white">
+        <Link href={"/terms"} className="transition hover:text-white">
           Terms
         </Link>
         <Link href={"/careers"} className="transition hover:text-white">
