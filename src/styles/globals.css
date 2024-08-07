@@ -73,3 +73,12 @@
 .section-description {
   @apply text-center text-[1.35rem] leading-[1.875rem] tracking-tight;
 }
+
+.social-icon {
+  fill: currentColor;
+  transition: fill 0.3s ease;
+}
+
+.social-icon:hover {
+  fill: white;
+}
