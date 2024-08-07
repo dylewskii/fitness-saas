@@ -23,8 +23,8 @@ export default function Footer() {
         <Link href={"/terms"} className="transition hover:text-white">
           Terms
         </Link>
-        <Link href={"/careers"} className="transition hover:text-white">
-          Careers
+        <Link href={"/privacy"} className="transition hover:text-white">
+          Privacy
         </Link>
       </div>
 
