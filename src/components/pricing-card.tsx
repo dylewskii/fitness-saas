@@ -21,7 +21,7 @@ function PricingCard({
   return (
     <article
       className={twMerge(
-        "flex flex-col rounded-3xl border border-[#F1F1F1] p-10 shadow-md",
+        "flex w-full max-w-xs flex-col rounded-3xl border border-[#F1F1F1] p-10 shadow-md",
         isInverse && "border-black bg-black text-white",
       )}
     >
@@ -88,8 +88,8 @@ function Button({
   return (
     <button
       className={twMerge(
-        "mt-[30px] rounded-lg bg-black px-14 py-[.55rem] text-sm text-white",
-        isInverse && "bg-white text-black",
+        "mt-[30px] rounded-lg bg-black px-14 py-[.55rem] text-sm text-white transition hover:bg-black/85",
+        isInverse && "bg-white text-black hover:bg-white/85",
       )}
     >
       {children}
