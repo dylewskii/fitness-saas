@@ -5,6 +5,7 @@ import ProcessBreakdown from "~/components/process-breakdown";
 import Testimonial from "~/components/testimonial";
 import ExerciseSlider from "~/components/exercise-slider";
 import Pricing from "~/components/pricing";
+import Newsletter from "~/components/newsletter";
 
 export default async function Home() {
   return (
@@ -16,6 +17,7 @@ export default async function Home() {
       <ExerciseSlider />
       <Pricing />
       <Testimonial />
+      <Newsletter />
     </main>
   );
 }
