@@ -49,8 +49,15 @@ const plans = [
 export default function Pricing() {
   return (
     <section className="space-y-8 p-8 py-24">
-      <h3 className="text-3xl font-bold">Pricing</h3>
-      <div className="flex flex-col gap-6 md:flex-row md:items-end">
+      <div className="section-heading">
+        <h3 className="section-title">Pricing</h3>
+        <p className="section-description">
+          Choose from one of our plans. Contact us if you would like to discuss
+          the Enterprise plan.
+        </p>
+      </div>
+
+      <div className="flex flex-col items-center gap-6 lg:flex-row lg:items-end">
         {plans.map(({ tier, inverse, recommended, price, features }, i) => (
           <PricingCard key={`${tier + i}`} isInverse={inverse}>
             <div className="flex items-center justify-between">
@@ -60,9 +67,7 @@ export default function Pricing() {
               {recommended && <PricingCard.Recommended />}
             </div>
             <PricingCard.Price isInverse={inverse}>{price}</PricingCard.Price>
-            <PricingCard.Button isInverse={inverse}>
-              Sign up now
-            </PricingCard.Button>
+            <PricingCard.Button isInverse={inverse}>Sign up</PricingCard.Button>
             <PricingCard.Features features={features} />
           </PricingCard>
         ))}
