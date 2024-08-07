@@ -29,7 +29,7 @@ export default function Newsletter() {
         </svg>
         <p className="text-xl font-bold">Let&apos;s grow your club</p>
       </div>
-      <div className="flex w-full flex-col justify-between gap-4 border-b-2 px-12 py-8 md:flex-row">
+      <div className="flex w-full flex-col items-center justify-between gap-4 border-b-2 px-12 py-8 md:flex-row">
         <p className="mx-auto text-2xl font-bold">
           Join our newsletter to stay updated with us!
         </p>
