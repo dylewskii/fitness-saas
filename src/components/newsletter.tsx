@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Newsletter() {
   return (
-    <div>
-      <div className="mx-auto px-12 pt-4">
+    <div className="px-6">
+      <div className="flex flex-col pt-4 sm:items-center sm:justify-center">
         <svg
           className="ml-4 h-8 w-8"
           xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ export default function Newsletter() {
         </svg>
         <p className="text-xl font-bold">Let&apos;s grow your club</p>
       </div>
-      <div className="flex w-full flex-col items-center justify-between gap-4 border-b-2 px-12 py-8 md:flex-row">
+      <div className="flex flex-col items-center justify-between gap-4 border-b-2 py-8 md:flex-row">
         <p className="mx-auto text-2xl font-bold">
           Join our newsletter to stay updated with us!
         </p>
@@ -58,7 +58,7 @@ export default function Newsletter() {
             maxLength={50}
             placeholder="Enter your email"
             autoComplete="email"
-            className="w-[24rem] pl-4 text-lg focus:outline-none"
+            className="pl-4 text-lg focus:outline-none sm:w-[24rem]"
           />
         </label>
 
