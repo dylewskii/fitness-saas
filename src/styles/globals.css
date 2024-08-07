@@ -61,3 +61,15 @@
     --error-content: 0, 48%, 95%;
   }
 }
+
+.section-heading {
+  @apply mx-auto max-w-[540px] text-center;
+}
+
+.section-title {
+  @apply text-center text-[2.25rem] font-bold tracking-tighter md:text-[3.375rem] md:leading-[3.75rem];
+}
+
+.section-description {
+  @apply text-center text-[1.35rem] leading-[1.875rem] tracking-tight;
+}
