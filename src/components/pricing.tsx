@@ -46,9 +46,13 @@ const plans = [
   },
 ];
 
-export default function Pricing() {
+type PricingProps = {
+  className?: string;
+};
+
+export default function Pricing({ className }: PricingProps) {
   return (
-    <section className="space-y-8 p-8 py-24">
+    <section className={`${className} space-y-8 px-8 py-8`}>
       <div className="section-heading">
         <h3 className="section-title">Pricing</h3>
         <p className="section-description">
