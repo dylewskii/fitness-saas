@@ -57,7 +57,7 @@ export default function Pricing() {
         </p>
       </div>
 
-      <div className="flex flex-col items-center gap-6 lg:flex-row lg:items-end">
+      <div className="flex flex-col items-center gap-6 lg:flex-row lg:items-end lg:justify-center">
         {plans.map(({ tier, inverse, recommended, price, features }, i) => (
           <PricingCard key={`${tier + i}`} isInverse={inverse}>
             <div className="flex items-center justify-between">
