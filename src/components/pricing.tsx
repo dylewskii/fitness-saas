@@ -52,7 +52,7 @@ type PricingProps = {
 
 export default function Pricing({ className }: PricingProps) {
   return (
-    <section className={`${className} space-y-8 px-8 py-8`}>
+    <section className={`${className} space-y-8 px-8 py-12`}>
       <div className="section-heading">
         <h3 className="section-title">Pricing</h3>
         <p className="section-description">
