@@ -1,6 +1,6 @@
 export default function ProcessBreakdown() {
   return (
-    <section className="my-24 flex flex-col items-center px-12">
+    <section className="flex flex-col items-center px-12 py-40">
       <p className="section-title pb-8">The Process:</p>
       <ol className="flex w-full flex-col items-center gap-8 md:flex-row md:justify-center">
         {[
