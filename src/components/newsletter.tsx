@@ -3,7 +3,7 @@ import React from "react";
 export default function Newsletter() {
   return (
     <div>
-      <div className="mx-auto border-t-2 px-12 pt-4">
+      <div className="mx-auto px-12 pt-4">
         <svg
           className="ml-4 h-8 w-8"
           xmlns="http://www.w3.org/2000/svg"
