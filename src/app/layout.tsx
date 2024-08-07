@@ -20,7 +20,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html
         lang="en"
-        className={`${GeistSans.variable} bg-primary max-w-[100%] overflow-x-hidden`}
+        className={`${GeistSans.variable} max-w-[100%] overflow-x-hidden bg-black`}
       >
         <body>
           <TopNav />
