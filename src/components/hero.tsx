@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section className="flex flex-col py-6 sm:px-16 sm:py-14">
       <div className="max-w-[970px] px-8 py-12 sm:my-auto sm:p-0">
-        <h1 className="bg-background block text-[2.25rem] font-bold sm:my-auto md:text-[4rem]">
+        <h1 className="bg-background block text-[2.25rem] font-bold tracking-tighter sm:my-auto sm:text-[3rem] md:text-[4rem] md:leading-[3.75rem]">
           Focus on your club. <br />
           We&apos;ll take care of the rest.
         </h1>
