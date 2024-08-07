@@ -1,6 +1,7 @@
 "use client";
 
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import Link from "next/link";
 
 type TopNavProps = {
   className?: string;
@@ -11,7 +12,7 @@ export function TopNav({ className }: TopNavProps) {
     <nav
       className={`${className} flex w-full max-w-[1920px] items-center justify-between bg-black px-12 py-4 text-white`}
     >
-      <div className="flex items-center text-2xl font-bold">
+      <Link href={"/"} className="flex items-center text-2xl font-bold">
         <svg
           className="h-8 w-8"
           xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +37,7 @@ export function TopNav({ className }: TopNavProps) {
           />
         </svg>
         Fitnessio
-      </div>
+      </Link>
 
       <div className="flex flex-row">
         <SignedOut>
