@@ -4,7 +4,7 @@ import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 
 import { ClerkProvider } from "@clerk/nextjs";
-import { TopNav } from "../components/topnav";
+import { TopNav } from "../components/topnav/topnav";
 import Footer from "~/components/footer";
 
 export const metadata: Metadata = {
