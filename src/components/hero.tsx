@@ -66,7 +66,7 @@ export default function Hero() {
       </div>
 
       <div className="relative">
-        <div className="bg-background absolute -top-4 z-50 w-full rounded-b-3xl p-4 sm:hidden"></div>
+        <div className="bg-background absolute -top-4 z-20 w-full rounded-b-3xl p-4 sm:hidden"></div>
         <div className="relative h-[24rem] sm:mt-[4rem]">
           <ImageCard
             className="z-10 h-full w-full sm:absolute sm:right-48 sm:top-0 sm:h-[14rem] sm:w-[14rem] lg:h-[20rem] lg:w-[20rem]"
@@ -80,7 +80,7 @@ export default function Hero() {
           />
         </div>
 
-        <div className="bg-background absolute -bottom-2 z-50 w-full rounded-t-3xl p-4 sm:hidden"></div>
+        <div className="bg-background absolute -bottom-2 z-20 w-full rounded-t-3xl p-4 sm:hidden"></div>
       </div>
     </section>
   );
