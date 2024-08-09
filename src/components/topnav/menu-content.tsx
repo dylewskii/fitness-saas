@@ -3,10 +3,13 @@ import MenuItem from "./menu-item";
 
 type MenuContentProps = {
   links: Array<{ title: string; href: string }>;
-  onLinkClick: () => void;
+  onTransitionComplete: () => void;
 };
 
-export default function MenuContent({ links, onLinkClick }: MenuContentProps) {
+export default function MenuContent({
+  links,
+  onTransitionComplete,
+}: MenuContentProps) {
   const containerVariants = {
     initial: {
       transition: {
@@ -33,7 +36,11 @@ export default function MenuContent({ links, onLinkClick }: MenuContentProps) {
     >
       {links.map((link, index) => (
         <div key={index} className="overflow-hidden">
-          <MenuItem href={link.href} title={link.title} onClick={onLinkClick} />
+          <MenuItem
+            href={link.href}
+            title={link.title}
+            onTransitionComplete={onTransitionComplete}
+          />
         </div>
       ))}
     </motion.div>

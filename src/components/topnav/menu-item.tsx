@@ -1,14 +1,18 @@
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import TransitionLink from "../transition-link";
 
 type MenuItemProps = {
   href: string;
   title: string;
-  onClick: () => void;
+  onTransitionComplete: () => void;
 };
 
-export default function MenuItem({ href, title, onClick }: MenuItemProps) {
+export default function MenuItem({
+  href,
+  title,
+  onTransitionComplete,
+}: MenuItemProps) {
   const linkVariants = {
     initial: {
       y: "30vh",
@@ -59,13 +63,13 @@ export default function MenuItem({ href, title, onClick }: MenuItemProps) {
           </SignedIn>
         </>
       ) : (
-        <Link
+        <TransitionLink
           href={href}
-          onClick={onClick}
+          onTransitionComplete={onTransitionComplete}
           className="section-title uppercase hover:text-black/55"
         >
           {title}
-        </Link>
+        </TransitionLink>
       )}
     </motion.div>
   );
