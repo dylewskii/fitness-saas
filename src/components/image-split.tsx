@@ -9,7 +9,7 @@ type ImageSplitProps = {
 export default function ImageSplit({ className }: ImageSplitProps) {
   return (
     <section
-      className={`${className} hidden w-full sm:flex sm:h-[300px] sm:overflow-hidden lg:hidden`}
+      className={`${className} hidden w-full sm:flex sm:h-[300px] sm:overflow-hidden sm:border-y-2 sm:border-black lg:hidden`}
     >
       <div className="flex w-1/2">
         <Image
