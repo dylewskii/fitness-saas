@@ -13,12 +13,12 @@ export default function Hero() {
           <ImageCard
             alt="A man holding a kettlebell above his head."
             src={imgOne}
-            className="hidden lg:-right-12 lg:top-14 lg:flex lg:h-[14rem] lg:w-[16rem]"
+            className="z-30 hidden lg:-right-12 lg:top-14 lg:flex lg:h-[14rem] lg:w-[16rem]"
           />
           <ImageCard
-            alt="A man holding a kettlebell above his head."
+            alt="A man performing a turkish get up with a kettlebell"
             src={imgTwo}
-            className="hidden lg:right-0 lg:top-0 lg:flex lg:h-[14rem] lg:w-[16rem]"
+            className="z-20 hidden lg:right-0 lg:top-0 lg:flex lg:h-[14rem] lg:w-[16rem]"
           />
         </div>
 
@@ -32,7 +32,7 @@ export default function Hero() {
 
 const HeroTitle = () => {
   return (
-    <h1 className="bg-background block text-[2.25rem] font-bold tracking-tighter sm:my-auto sm:text-[3rem] md:text-[4rem] md:leading-[3.75rem]">
+    <h1 className="bg-background block text-[2.5rem] font-bold tracking-tighter sm:my-auto sm:text-[3rem] md:text-[4rem] md:leading-[3.75rem]">
       Focus on your club. <br />
       We&apos;ll take care of the rest.
     </h1>
