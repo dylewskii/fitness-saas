@@ -7,18 +7,18 @@ import Button from "./ui/button";
 export default function Hero() {
   return (
     <section className="flex flex-col items-center py-6 sm:px-16 sm:py-14">
-      <div className="relative flex max-w-[970px] flex-col px-8 pb-0 pt-12 sm:my-auto sm:p-0">
+      <div className="relative flex max-w-[1200px] flex-col px-8 pb-0 pt-12 sm:my-auto sm:p-0">
         <div className="flex">
           <HeroTitle />
           <ImageCard
             alt="A man holding a kettlebell above his head."
             src={imgOne}
-            className="z-30 hidden lg:-right-12 lg:top-14 lg:flex lg:h-[14rem] lg:w-[16rem]"
+            className="z-30 hidden lg:-right-12 lg:top-14 lg:flex lg:h-[18rem] lg:w-[20rem]"
           />
           <ImageCard
             alt="A man performing a turkish get up with a kettlebell"
             src={imgTwo}
-            className="z-20 hidden lg:right-0 lg:top-0 lg:flex lg:h-[14rem] lg:w-[16rem]"
+            className="z-20 hidden lg:right-0 lg:top-0 lg:flex lg:h-[18rem] lg:w-[20rem]"
           />
         </div>
 
@@ -32,7 +32,7 @@ export default function Hero() {
 
 const HeroTitle = () => {
   return (
-    <h1 className="bg-background block text-[2.5rem] font-bold tracking-tighter sm:my-auto sm:text-[3rem] md:text-[4rem] md:leading-[3.75rem]">
+    <h1 className="bg-background block text-[2.5rem] font-bold tracking-tighter sm:my-auto sm:text-[3rem] md:text-[4rem] md:leading-[3.75rem] lg:text-[4.5rem]">
       Focus on your club. <br />
       We&apos;ll take care of the rest.
     </h1>
