@@ -2,15 +2,20 @@ export default function ExerciseSlider() {
   const sports = [
     "Football",
     "Basketball",
-    "Gym",
     "Running",
+    "Tennis",
+    "Boxing",
     "Wrestling",
     "MMA",
     "Muay Thai",
     "Jiu-Jitsu",
     "Swimming",
     "Gymnastics",
+    "Athletics",
+    "Weightlifting",
+    "Rugby",
     "Dance",
+    "Golf",
   ];
   const duplicatedSports = [...sports, ...sports];
 
