@@ -5,12 +5,12 @@ export default function AboutPage() {
   const appName = "Fitnessio";
 
   return (
-    <div className="mx-auto max-w-4xl bg-white px-4 py-12 text-black sm:px-6 lg:px-8">
+    <div className="flex w-full flex-col items-center bg-white px-4 py-12 text-black sm:px-6 lg:px-8">
       <h1 className="section-title mb-8 text-center text-3xl font-bold">
         About {appName}
       </h1>
 
-      <div className="space-y-8">
+      <div className="max-w-[1200px] space-y-8">
         <section>
           <h2 className="mb-4 text-2xl font-semibold">Our Story</h2>
           <p className="text-black/90">
