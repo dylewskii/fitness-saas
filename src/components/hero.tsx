@@ -3,6 +3,7 @@ import ImageCard from "./image-card";
 import imgOne from "../../public/swinging-kettlebell.webp";
 import imgTwo from "../../public/workout-two.webp";
 import Button from "./ui/button";
+import { TextEffect } from "./ui/text-effect";
 
 export default function Hero() {
   return (
@@ -32,10 +33,14 @@ export default function Hero() {
 
 const HeroTitle = () => {
   return (
-    <h1 className="bg-background block text-[2.5rem] font-bold tracking-tighter sm:my-auto sm:text-[3rem] md:text-[4rem] md:leading-[3.75rem] lg:text-[4.5rem]">
-      Focus on your club. <br />
-      We&apos;ll take care of the rest.
-    </h1>
+    <TextEffect
+      per="word"
+      as="h1"
+      preset="blur"
+      className="bg-background block text-[2.5rem] font-bold tracking-tighter sm:my-auto sm:text-[3rem] md:text-[4rem] md:leading-[3.75rem] lg:text-[4.5rem]"
+    >
+      Focus on your club. We&apos;ll take care of the rest.
+    </TextEffect>
   );
 };
 
