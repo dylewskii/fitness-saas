@@ -1,5 +1,5 @@
 import CTAPanel from "~/components/cta-panel";
-import Hero from "../components/hero";
+import Hero from "../components/hero/hero";
 import FeatureOverview from "~/components/feature-overview";
 import ProcessBreakdown from "~/components/process-breakdown";
 import Testimonial from "~/components/testimonial";

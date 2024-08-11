@@ -1,50 +1,6 @@
-import React from "react";
-import ImageCard from "./image-card";
-import imgOne from "../../public/swinging-kettlebell.webp";
-import imgTwo from "../../public/workout-two.webp";
-import Button from "./ui/button";
-import { TextEffect } from "./ui/text-effect";
+import Button from "../ui/button";
 
-export default function Hero() {
-  return (
-    <section className="flex flex-col items-center py-6 sm:px-16 sm:py-14">
-      <div className="relative flex max-w-[1200px] flex-col px-8 pb-0 pt-12 sm:my-auto sm:p-0">
-        <div className="flex">
-          <HeroTitle />
-          <ImageCard
-            alt="A man holding a kettlebell above his head."
-            src={imgOne}
-            className="z-30 hidden lg:-right-12 lg:top-14 lg:flex lg:h-[18rem] lg:w-[20rem]"
-          />
-          <ImageCard
-            alt="A man performing a turkish get up with a kettlebell"
-            src={imgTwo}
-            className="z-20 hidden lg:right-0 lg:top-0 lg:flex lg:h-[18rem] lg:w-[20rem]"
-          />
-        </div>
-
-        <HeroButtons />
-
-        <WrappedImage />
-      </div>
-    </section>
-  );
-}
-
-const HeroTitle = () => {
-  return (
-    <TextEffect
-      per="word"
-      as="h1"
-      preset="blur"
-      className="bg-background block text-[2.5rem] font-bold tracking-tighter sm:my-auto sm:text-[3rem] md:text-[4rem] md:leading-[3.75rem] lg:text-[4.5rem]"
-    >
-      Focus on your club. We&apos;ll take care of the rest.
-    </TextEffect>
-  );
-};
-
-const HeroButtons = () => {
+export const HeroButtons = () => {
   return (
     <div className="flex items-center justify-center gap-2 py-6 md:flex-row md:justify-start">
       <Button variant="primary">
@@ -95,24 +51,6 @@ const HeroButtons = () => {
           />
         </svg>
       </Button>
-    </div>
-  );
-};
-
-const WrappedImage = () => {
-  return (
-    <div className="w-full sm:hidden">
-      <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen">
-        <div className="bg-background absolute -top-3 z-30 w-full rounded-b-3xl p-4 sm:hidden"></div>
-        <div className="relative h-[24rem] sm:mt-[4rem]">
-          <ImageCard
-            alt="A man holding a kettlebell above his head."
-            src={imgOne}
-            className="z-20 h-full w-full"
-          />
-        </div>
-        <div className="bg-background absolute -bottom-2 z-30 w-screen rounded-t-3xl p-4 sm:hidden"></div>
-      </div>
     </div>
   );
 };
