@@ -1,6 +1,6 @@
 import ImageCard from "../image-card";
-import imgOne from "../../public/swinging-kettlebell.webp";
-import imgTwo from "../../public/workout-two.webp";
+import imgOne from "../../../public/swinging-kettlebell.webp";
+import imgTwo from "../../../public/workout-two.webp";
 import { HeroTitle } from "./hero-title";
 import { HeroButtons } from "./hero-buttons";
 import { WrappedImage } from "./wrapped-image";
