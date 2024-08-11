@@ -8,7 +8,7 @@ import { TopNav } from "../components/topnav/topnav";
 import Footer from "~/components/footer";
 
 export const metadata: Metadata = {
-  title: "Fitness SaaS",
+  title: "Fitnessio",
   description: "Your club, your rules",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
