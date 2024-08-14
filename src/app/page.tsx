@@ -7,6 +7,7 @@ import ExerciseSlider from "~/components/exercise-slider";
 import Pricing from "~/components/pricing";
 import Newsletter from "~/components/newsletter";
 import ImageSplit from "~/components/image-split";
+import WaveWrapper from "~/components/wave-wrapper";
 
 export default async function Home() {
   return (
@@ -14,7 +15,9 @@ export default async function Home() {
       <Hero />
       <ImageSplit />
       <CTAPanel />
-      <FeatureOverview />
+      <WaveWrapper>
+        <FeatureOverview />
+      </WaveWrapper>
       <ProcessBreakdown />
       <ExerciseSlider />
       <Pricing />

@@ -4,7 +4,7 @@ import FeatureOverview from "~/components/feature-overview";
 export default function FeaturesPage() {
   return (
     <div>
-      <FeatureOverview />
+      <FeatureOverview className="" />
     </div>
   );
 }
