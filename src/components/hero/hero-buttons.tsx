@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import Button from "../ui/button";
 import { motion, type Variants } from "framer-motion";
 import TransitionLink from "../transition-link";
