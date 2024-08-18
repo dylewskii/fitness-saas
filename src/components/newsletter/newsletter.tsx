@@ -1,5 +1,5 @@
 import React from "react";
-import EmailInput from "./ui/email-input";
+import EmailInput from "../ui/email-input";
 
 export default function Newsletter() {
   return (
@@ -36,7 +36,7 @@ export default function Newsletter() {
         </p>
         <EmailInput />
 
-        <button className="bg-secondary rounded-3xl border-2 border-black px-8 py-3 text-lg font-bold transition hover:bg-[hsl(46,48%,45%)]/80">
+        <button className="rounded-3xl border-2 border-black bg-secondary px-8 py-3 text-lg font-bold transition hover:bg-[hsl(46,48%,45%)]/80">
           Subscribe
         </button>
       </div>

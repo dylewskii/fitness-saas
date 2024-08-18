@@ -3,7 +3,7 @@ import "~/styles/globals.css";
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
-import Footer from "~/components/footer";
+import Footer from "~/components/footer/footer";
 import TopNavWrapper from "~/components/topnav/top-nav-wrapper";
 
 export const metadata: Metadata = {

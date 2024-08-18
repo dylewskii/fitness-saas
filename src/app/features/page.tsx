@@ -1,4 +1,4 @@
-import FeatureOverview from "~/components/feature-overview";
+import FeatureOverview from "~/components/features/feature-overview";
 
 export default function FeaturesPage({ className }: { className: string }) {
   return (
