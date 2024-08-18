@@ -1,11 +1,10 @@
-import React from "react";
 import Button from "~/components/ui/button";
 
 export default function AboutPage() {
   const appName = "Fitnessio";
 
   return (
-    <div className="flex w-full flex-col items-center bg-white px-4 py-12 text-black sm:px-6 lg:px-8">
+    <div className="flex w-full flex-col items-center rounded-b-3xl rounded-t-3xl bg-white px-4 py-12 text-black sm:px-6 lg:px-8">
       <h1 className="section-title mb-8 text-center text-3xl font-bold">
         About {appName}
       </h1>

@@ -1,11 +1,20 @@
 type FeatureOverviewProps = {
+  bgColor: "black" | "white";
   className?: string;
 };
 
-export default function FeatureOverview({ className }: FeatureOverviewProps) {
+export default function FeatureOverview({
+  bgColor,
+  className,
+}: FeatureOverviewProps) {
+  const bgOptions = {
+    black: "bg-black",
+    white: "bg-white",
+  };
+
   return (
     <div
-      className={`flex flex-col items-center justify-center bg-black px-12 py-24 text-white ${className}`}
+      className={`flex flex-col items-center justify-center px-12 py-24 ${bgOptions[bgColor]} ${className} ${bgColor === "black" ? "text-white" : "text-black"}`}
     >
       <p className="section-title pb-4">What&apos;s Included: </p>
       <ul className="mx-auto max-w-2xl space-y-2 px-4 pt-6">

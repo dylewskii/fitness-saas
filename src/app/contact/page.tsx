@@ -1,8 +1,6 @@
-import React from "react";
-
 export default function HelpPage() {
   return (
-    <div className="flex flex-col items-center justify-center bg-white p-12">
+    <div className="flex flex-col items-center justify-center rounded-b-3xl rounded-t-3xl bg-white p-12">
       <h1 className="section-title">Need Help?</h1>
       <p className="section-description">
         Reach out to us and we&apos;ll get back to you within 3 working days.
