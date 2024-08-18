@@ -4,11 +4,13 @@ import MenuItem from "./menu-item";
 type MenuContentProps = {
   links: Array<{ title: string; href: string }>;
   onTransitionComplete: () => void;
+  onLinkClick: () => void;
 };
 
 export default function MenuContent({
   links,
   onTransitionComplete,
+  onLinkClick,
 }: MenuContentProps) {
   const containerVariants = {
     initial: {
@@ -40,6 +42,7 @@ export default function MenuContent({
             href={link.href}
             title={link.title}
             onTransitionComplete={onTransitionComplete}
+            onLinkClick={onLinkClick}
           />
         </div>
       ))}

@@ -2,10 +2,9 @@ import "~/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
-
 import { ClerkProvider } from "@clerk/nextjs";
-import { TopNav } from "../components/topnav/topnav";
 import Footer from "~/components/footer";
+import TopNavWrapper from "~/components/topnav/top-nav-wrapper";
 
 export const metadata: Metadata = {
   title: "Fitnessio",
@@ -23,7 +22,7 @@ export default function RootLayout({
         className={`${GeistSans.variable} max-w-[100%] overflow-x-hidden bg-black`}
       >
         <body>
-          <TopNav />
+          <TopNavWrapper />
           {children}
           <Footer />
         </body>

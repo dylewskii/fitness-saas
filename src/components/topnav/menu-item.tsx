@@ -1,18 +1,28 @@
 import { motion } from "framer-motion";
-import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+  useClerk,
+} from "@clerk/nextjs";
 import TransitionLink from "../transition-link";
 
 type MenuItemProps = {
   href: string;
   title: string;
   onTransitionComplete: () => void;
+  onLinkClick: () => void;
 };
 
 export default function MenuItem({
   href,
   title,
   onTransitionComplete,
+  onLinkClick,
 }: MenuItemProps) {
+  const { signOut } = useClerk();
+
   const linkVariants = {
     initial: {
       y: "30vh",
@@ -28,6 +38,15 @@ export default function MenuItem({
         duration: 0.7,
       },
     },
+  };
+
+  const handleClick = async () => {
+    if (title === "Logout") {
+      await signOut();
+      onLinkClick();
+    } else {
+      onLinkClick();
+    }
   };
 
   return (
@@ -56,16 +75,24 @@ export default function MenuItem({
             </SignInButton>
           </SignedOut>
           <SignedIn>
-            <p className="section-title flex items-center gap-2 uppercase hover:text-black/55">
+            <div className="section-title flex items-center gap-2 uppercase hover:text-black/55">
               <UserButton />
-              Profile
-            </p>
+              <span>Profile</span>
+            </div>
           </SignedIn>
         </>
+      ) : title === "Logout" ? (
+        <button
+          onClick={handleClick}
+          className="section-title uppercase hover:text-black/55"
+        >
+          {title}
+        </button>
       ) : (
         <TransitionLink
           href={href}
           onTransitionComplete={onTransitionComplete}
+          onClick={() => onLinkClick()}
           className="section-title uppercase hover:text-black/55"
         >
           {title}

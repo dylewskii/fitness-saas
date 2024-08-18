@@ -2,15 +2,21 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import Logo from "./logo";
 import { MenuToggle } from "./menu-toggle";
+import Logo from "./logo";
 import MenuContent from "./menu-content";
+
+type MenuLink = {
+  title: string;
+  href: string;
+};
 
 type TopNavProps = {
   className?: string;
+  menuLinks: MenuLink[];
 };
 
-export function TopNav({ className }: TopNavProps) {
+export default function TopNav({ className, menuLinks }: TopNavProps) {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   const handleMenuClick = () => {
@@ -20,14 +26,6 @@ export function TopNav({ className }: TopNavProps) {
   const closeMenu = () => {
     setMenuOpen(false);
   };
-
-  const menuLinks = [
-    { title: "About", href: "/about" },
-    { title: "Features", href: "/features" },
-    { title: "Pricing", href: "/pricing" },
-    { title: "Contact", href: "/contact" },
-    { title: "Login", href: "/login" },
-  ];
 
   const menuVariants = {
     initial: {
@@ -64,7 +62,7 @@ export function TopNav({ className }: TopNavProps) {
               initial="initial"
               animate="animate"
               exit="exit"
-              className="bg-secondary absolute left-0 top-0 z-50 h-screen w-full origin-top px-12 py-4 text-black"
+              className="absolute left-0 top-0 z-50 h-screen w-full origin-top bg-secondary px-12 py-4 text-black"
             >
               <div className="flex h-full flex-col">
                 <div className="flex justify-between">
@@ -73,6 +71,7 @@ export function TopNav({ className }: TopNavProps) {
                 </div>
                 <MenuContent
                   links={menuLinks}
+                  onLinkClick={closeMenu}
                   onTransitionComplete={closeMenu}
                 />
               </div>
