@@ -11,7 +11,7 @@ import WaveWrapper from "~/components/wave-wrapper";
 
 export default async function Home() {
   return (
-    <main className="flex min-h-screen w-[100%] flex-col overflow-x-hidden rounded-t-3xl bg-background text-copy">
+    <main className="flex min-h-screen w-[100%] flex-col overflow-x-hidden rounded-b-3xl rounded-t-3xl bg-background text-copy">
       <Hero />
       <ImageSplit />
       <CTAPanel />
