@@ -4,11 +4,7 @@ type EmailInputProps = {
 
 export default function EmailInput({ className }: EmailInputProps) {
   return (
-    <label
-      htmlFor="email"
-      id="email"
-      className="relative flex items-center justify-start overflow-hidden rounded-3xl border-2 border-zinc-400 px-8 py-3"
-    >
+    <div className="group relative flex items-center justify-start overflow-hidden rounded-3xl border-2 border-zinc-400 px-8 py-3 focus-within:ring-2 focus-within:ring-black">
       <svg
         className="absolute left-5 h-5 w-5"
         viewBox="0 0 24 24"
@@ -32,6 +28,6 @@ export default function EmailInput({ className }: EmailInputProps) {
         maxLength={50}
         className={`${className} pl-4 text-lg focus:outline-none sm:w-[24rem]`}
       />
-    </label>
+    </div>
   );
 }
