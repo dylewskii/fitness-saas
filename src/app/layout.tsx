@@ -5,6 +5,7 @@ import { type Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
 import Footer from "~/components/footer/footer";
 import TopNavWrapper from "~/components/topnav/top-nav-wrapper";
+import { TanstackProvider } from "~/providers/tanstack-provider";
 
 export const metadata: Metadata = {
   title: "Fitnessio",
@@ -22,9 +23,11 @@ export default function RootLayout({
         className={`${GeistSans.variable} max-w-[100%] overflow-x-hidden bg-black`}
       >
         <body>
-          <TopNavWrapper />
-          {children}
-          <Footer />
+          <TanstackProvider>
+            <TopNavWrapper />
+            {children}
+            <Footer />
+          </TanstackProvider>
         </body>
       </html>
     </ClerkProvider>
