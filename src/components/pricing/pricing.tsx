@@ -1,50 +1,5 @@
 import PricingCard from "./pricing-card";
-
-const plans = [
-  {
-    tier: "Personal",
-    price: "$19",
-    features: [
-      "1 club owner",
-      "Up to 20 clients",
-      "Unlimited Tasks",
-      "Desktop Access",
-      "Standard Support",
-    ],
-    inverse: false,
-    recommended: false,
-  },
-  {
-    tier: "Pro",
-    price: "$49",
-    features: [
-      "5 club owners",
-      "Up to 150 clients",
-      "Unlimited Tasks",
-      "Integrations",
-      "Desktop & App Access",
-      "Priority Support",
-    ],
-    inverse: true,
-    recommended: true,
-  },
-  {
-    tier: "Enterprise",
-    price: "$100",
-    features: [
-      "Unlimited club owners",
-      "Unlimited clients",
-      "Unlimited Tasks",
-      "Integrations",
-      "Desktop & App Access",
-      "API Access",
-      "Security+ Features",
-      "Priority Support",
-    ],
-    inverse: false,
-    recommended: false,
-  },
-];
+import { plans } from "~/lib/plans";
 
 type PricingProps = {
   className?: string;
