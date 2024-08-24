@@ -13,6 +13,12 @@ export const env = createEnv({
       .default("development"),
     CLERK_SECRET_KEY: z.string().min(1),
     STRIPE_SECRET_KEY: z.string().min(1),
+    STRIPE_PERSONAL_PLAN_LINK: z.string().url(),
+    STRIPE_PRO_PLAN_LINK: z.string().url(),
+    STRIPE_ENTERPRISE_PLAN_LINK: z.string().url(),
+    STRIPE_PERSONAL_PLAN_PRICE_ID: z.string().min(1),
+    STRIPE_PRO_PLAN_PRICE_ID: z.string().min(1),
+    STRIPE_ENTERPRISE_PLAN_PRICE_ID: z.string().min(1),
   },
 
   /**
@@ -43,6 +49,13 @@ export const env = createEnv({
       process.env.NEXT_PUBLIC_CLERK_SIGN_IN_FORCE_REDIRECT_URL,
     NEXT_PUBLIC_CLERK_SIGN_UP_FORCE_REDIRECT_URL:
       process.env.NEXT_PUBLIC_CLERK_SIGN_UP_FORCE_REDIRECT_URL,
+    STRIPE_PERSONAL_PLAN_LINK: process.env.STRIPE_PERSONAL_PLAN_LINK,
+    STRIPE_PRO_PLAN_LINK: process.env.STRIPE_PRO_PLAN_LINK,
+    STRIPE_ENTERPRISE_PLAN_LINK: process.env.STRIPE_ENTERPRISE_PLAN_LINK,
+    STRIPE_PERSONAL_PLAN_PRICE_ID: process.env.STRIPE_PERSONAL_PLAN_PRICE_ID,
+    STRIPE_PRO_PLAN_PRICE_ID: process.env.STRIPE_PRO_PLAN_PRICE_ID,
+    STRIPE_ENTERPRISE_PLAN_PRICE_ID:
+      process.env.STRIPE_ENTERPRISE_PLAN_PRICE_ID,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially
