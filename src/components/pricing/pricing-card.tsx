@@ -78,25 +78,6 @@ function Price({
   );
 }
 
-function Button({
-  children,
-  isInverse,
-}: {
-  children: React.ReactNode;
-  isInverse: boolean;
-}) {
-  return (
-    <button
-      className={twMerge(
-        "mt-[30px] rounded-lg bg-black px-14 py-[.55rem] text-sm text-white transition hover:bg-black/85",
-        isInverse && "bg-white text-black hover:bg-white/85",
-      )}
-    >
-      {children}
-    </button>
-  );
-}
-
 function Features({ features }: { features: string[] }) {
   return (
     <ul className="mt-[32px] flex flex-col gap-5">
@@ -136,7 +117,6 @@ function Recommended() {
 PricingCard.PlanTier = PlanTier;
 PricingCard.Features = Features;
 PricingCard.Price = Price;
-PricingCard.Button = Button;
 PricingCard.Recommended = Recommended;
 
 export default PricingCard as typeof PricingCard & PricingCardComposition;
