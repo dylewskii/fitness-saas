@@ -13,6 +13,7 @@ export const env = createEnv({
       .default("development"),
     CLERK_SECRET_KEY: z.string().min(1),
     STRIPE_SECRET_KEY: z.string().min(1),
+    STRIPE_WEBHOOK_SECRET: z.string().min(1),
     STRIPE_PERSONAL_PLAN_LINK: z.string().url(),
     STRIPE_PRO_PLAN_LINK: z.string().url(),
     STRIPE_ENTERPRISE_PLAN_LINK: z.string().url(),
@@ -47,6 +48,7 @@ export const env = createEnv({
     CLERK_SECRET_KEY: process.env.CLERK_SECRET_KEY,
     NEXT_PUBLIC_STRIPE_PUBLIC_KEY: process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY,
     STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
+    STRIPE_WEBHOOK_SECRET: process.env.STRIPE_WEBHOOK_SECRET,
     NEXT_PUBLIC_CLERK_SIGN_IN_FORCE_REDIRECT_URL:
       process.env.NEXT_PUBLIC_CLERK_SIGN_IN_FORCE_REDIRECT_URL,
     NEXT_PUBLIC_CLERK_SIGN_UP_FORCE_REDIRECT_URL:
