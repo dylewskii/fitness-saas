@@ -1,3 +1,13 @@
+import { env } from "~/env";
+
+if (
+  !env.STRIPE_PERSONAL_PLAN_LINK ||
+  !env.STRIPE_PRO_PLAN_LINK ||
+  !env.STRIPE_ENTERPRISE_PLAN_LINK
+) {
+  throw new Error("Missing Stripe plan links in .env");
+}
+
 export const plans = [
   {
     tier: "Personal",
@@ -11,6 +21,7 @@ export const plans = [
     ],
     inverse: false,
     recommended: false,
+    paymentLink: env.STRIPE_PERSONAL_PLAN_LINK,
   },
   {
     tier: "Pro",
@@ -25,6 +36,7 @@ export const plans = [
     ],
     inverse: true,
     recommended: true,
+    paymentLink: env.STRIPE_PRO_PLAN_LINK,
   },
   {
     tier: "Enterprise",
@@ -41,5 +53,6 @@ export const plans = [
     ],
     inverse: false,
     recommended: false,
+    paymentLink: env.STRIPE_ENTERPRISE_PLAN_LINK,
   },
 ];
