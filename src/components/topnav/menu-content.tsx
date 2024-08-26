@@ -34,7 +34,7 @@ export default function MenuContent({
       initial="initial"
       animate="open"
       exit="initial"
-      className="flex h-full flex-col items-center justify-center gap-8"
+      className="flex h-full min-h-fit flex-col items-center justify-center gap-2 md:gap-8"
     >
       {links.map((link, index) => (
         <div key={index} className="overflow-hidden">

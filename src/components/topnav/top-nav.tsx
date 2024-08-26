@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { MenuToggle } from "./menu-toggle";
 import Logo from "./logo";
@@ -18,6 +18,19 @@ type TopNavProps = {
 
 export default function TopNav({ className, menuLinks }: TopNavProps) {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    const root = document.getElementsByTagName("html")[0];
+    if (menuOpen) {
+      root?.classList.add("overflow-hidden");
+    } else {
+      root?.classList.remove("overflow-hidden");
+    }
+
+    return () => {
+      root?.classList.remove("overflow-hidden");
+    };
+  }, [menuOpen]);
 
   const handleMenuClick = () => {
     setMenuOpen((prev) => !prev);

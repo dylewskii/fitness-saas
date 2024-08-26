@@ -95,3 +95,7 @@ body {
   transform: translateY(40px);
   filter: blur(12px);
 }
+
+.overflow-hidden {
+  overflow-y: hidden;
+}
