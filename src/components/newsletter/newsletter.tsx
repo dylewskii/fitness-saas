@@ -3,7 +3,7 @@ import EmailInput from "../ui/email-input";
 
 export default function Newsletter() {
   return (
-    <div className="border-b-2 px-6 py-12">
+    <div className="border-b-2 px-6 py-12 sm:py-24">
       <div className="flex flex-col pt-4 sm:items-center sm:justify-center">
         <svg
           className="ml-4 h-8 w-8"

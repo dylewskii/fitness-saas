@@ -2,7 +2,7 @@ import Button from "~/components/ui/button";
 
 export default function CTAPanel() {
   return (
-    <section className="relative flex max-w-[1920px] flex-col items-center justify-center px-12 pb-6 pt-24 sm:px-32">
+    <section className="relative flex max-w-[1920px] flex-col items-center justify-center px-12 pb-6 pt-24 sm:px-32 sm:py-28">
       <h2 className="section-title pb-6">Start Your Free Trial</h2>
       <p className="py-6 text-center text-2xl lg:w-[52rem]">
         Fitnessio is the ultimate solution for coaches and club owners.

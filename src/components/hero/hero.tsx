@@ -7,7 +7,7 @@ import { WrappedImage } from "./wrapped-image";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col items-center py-6 sm:px-16 sm:py-14">
+    <section className="flex flex-col items-center py-6 sm:px-16 sm:py-28">
       <div className="relative flex max-w-[1200px] flex-col px-8 pb-0 pt-12 sm:my-auto sm:p-0">
         <div className="flex">
           <HeroTitle />
