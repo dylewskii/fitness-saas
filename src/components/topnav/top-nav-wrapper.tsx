@@ -20,5 +20,5 @@ export default function TopNavWrapper() {
   const isAuthenticated = !!userId;
   const menuLinks = isAuthenticated ? authenticatedMenuLinks : defaultMenuLinks;
 
-  return <TopNav menuLinks={menuLinks} />;
+  return <TopNav menuLinks={menuLinks} isAuthenticated={isAuthenticated} />;
 }

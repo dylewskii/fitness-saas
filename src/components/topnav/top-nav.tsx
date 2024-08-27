@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { MenuToggle } from "./menu-toggle";
 import Logo from "./logo";
 import MenuContent from "./menu-content";
+import DashboardLink from "./dashboard-link";
 
 type MenuLink = {
   title: string;
@@ -14,9 +15,14 @@ type MenuLink = {
 type TopNavProps = {
   className?: string;
   menuLinks: MenuLink[];
+  isAuthenticated: boolean;
 };
 
-export default function TopNav({ className, menuLinks }: TopNavProps) {
+export default function TopNav({
+  className,
+  menuLinks,
+  isAuthenticated,
+}: TopNavProps) {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   useEffect(() => {
@@ -66,7 +72,11 @@ export default function TopNav({ className, menuLinks }: TopNavProps) {
       className={`${className} flex w-full max-w-[1920px] items-center justify-between bg-black px-12 py-4 text-white`}
     >
       <Logo />
-      <div>
+      <div className="flex items-center gap-4">
+        <span className="hidden md:block">
+          {isAuthenticated && <DashboardLink />}
+        </span>
+
         <MenuToggle isOpen={menuOpen} onClick={handleMenuClick} />
         <AnimatePresence>
           {menuOpen && (
