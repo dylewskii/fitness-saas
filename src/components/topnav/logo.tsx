@@ -1,8 +1,17 @@
-import Link from "next/link";
+import TransitionLink from "../transition-link";
 
-export default function Logo({ color = "white" }) {
+type LogoProps = {
+  color?: string;
+  closeMenu?: () => void;
+};
+
+export default function Logo({ color = "white", closeMenu }: LogoProps) {
   return (
-    <Link href={"/"} className="flex items-center text-2xl font-bold">
+    <TransitionLink
+      href={"/"}
+      className="flex items-center text-2xl font-bold"
+      onClick={closeMenu}
+    >
       <svg
         className="h-8 w-8"
         xmlns="http://www.w3.org/2000/svg"
@@ -21,6 +30,6 @@ export default function Logo({ color = "white" }) {
         />
       </svg>
       Fitnessio
-    </Link>
+    </TransitionLink>
   );
 }

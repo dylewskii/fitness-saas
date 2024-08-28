@@ -89,7 +89,7 @@ export default function TopNav({
             >
               <div className="flex h-full flex-col">
                 <div className="flex justify-between">
-                  <Logo color="black" />
+                  <Logo color="black" closeMenu={closeMenu} />
                   <MenuToggle isOpen={true} onClick={handleMenuClick} />
                 </div>
                 <MenuContent
