@@ -11,6 +11,7 @@ const defaultMenuLinks = [
 
 const authenticatedMenuLinks = [
   ...defaultMenuLinks.filter((link) => link.title !== "Login"),
+  { title: "Account", href: "/account" },
   { title: "Dashboard", href: "/dashboard" },
   { title: "Logout", href: "/" },
 ];
