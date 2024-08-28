@@ -7,20 +7,15 @@ import {
   useClerk,
 } from "@clerk/nextjs";
 import TransitionLink from "../transition-link";
+import { useMenuState } from "~/hooks/useMenuState";
 
 type MenuItemProps = {
   href: string;
   title: string;
-  onTransitionComplete: () => void;
-  onLinkClick: () => void;
 };
 
-export default function MenuItem({
-  href,
-  title,
-  onTransitionComplete,
-  onLinkClick,
-}: MenuItemProps) {
+export default function MenuItem({ href, title }: MenuItemProps) {
+  const { closeMenu } = useMenuState();
   const { signOut } = useClerk();
 
   const linkVariants = {
@@ -43,9 +38,9 @@ export default function MenuItem({
   const handleClick = async () => {
     if (title === "Logout") {
       await signOut();
-      onLinkClick();
+      closeMenu();
     } else {
-      onLinkClick();
+      closeMenu();
     }
   };
 
@@ -55,7 +50,10 @@ export default function MenuItem({
         <>
           <SignedOut>
             <SignInButton>
-              <button className="section-title flex items-center gap-2 uppercase hover:text-black/55">
+              <button
+                className="section-title flex items-center gap-2 py-1 uppercase hover:text-black/55"
+                onClick={closeMenu}
+              >
                 Login
                 <svg
                   className="h-8 w-8"
@@ -91,8 +89,7 @@ export default function MenuItem({
       ) : (
         <TransitionLink
           href={href}
-          onTransitionComplete={onTransitionComplete}
-          onClick={() => onLinkClick()}
+          onTransitionComplete={closeMenu}
           className="section-title uppercase hover:text-black/55"
         >
           {title}

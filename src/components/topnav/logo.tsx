@@ -10,7 +10,7 @@ export default function Logo({ color = "white", closeMenu }: LogoProps) {
     <TransitionLink
       href={"/"}
       className="flex items-center text-2xl font-bold"
-      onClick={closeMenu}
+      onTransitionComplete={closeMenu}
     >
       <svg
         className="h-8 w-8"

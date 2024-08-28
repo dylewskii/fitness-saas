@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { MenuToggle } from "./menu-toggle";
+import { useMenuState } from "~/hooks/useMenuState";
 import Logo from "./logo";
 import MenuContent from "./menu-content";
 import DashboardLink from "./dashboard-link";
@@ -23,7 +24,7 @@ export default function TopNav({
   menuLinks,
   isAuthenticated,
 }: TopNavProps) {
-  const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const { isOpen: menuOpen, toggleMenu, closeMenu } = useMenuState();
 
   useEffect(() => {
     const root = document.getElementsByTagName("html")[0];
@@ -37,14 +38,6 @@ export default function TopNav({
       root?.classList.remove("overflow-hidden");
     };
   }, [menuOpen]);
-
-  const handleMenuClick = () => {
-    setMenuOpen((prev) => !prev);
-  };
-
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
 
   const menuVariants = {
     initial: {
@@ -77,7 +70,7 @@ export default function TopNav({
           {isAuthenticated && <DashboardLink />}
         </span>
 
-        <MenuToggle isOpen={menuOpen} onClick={handleMenuClick} />
+        <MenuToggle isOpen={menuOpen} onClick={toggleMenu} />
         <AnimatePresence>
           {menuOpen && (
             <motion.div
@@ -90,13 +83,9 @@ export default function TopNav({
               <div className="flex h-full flex-col">
                 <div className="flex justify-between">
                   <Logo color="black" closeMenu={closeMenu} />
-                  <MenuToggle isOpen={true} onClick={handleMenuClick} />
+                  <MenuToggle isOpen={true} onClick={toggleMenu} />
                 </div>
-                <MenuContent
-                  links={menuLinks}
-                  onLinkClick={closeMenu}
-                  onTransitionComplete={closeMenu}
-                />
+                <MenuContent links={menuLinks} />
               </div>
             </motion.div>
           )}

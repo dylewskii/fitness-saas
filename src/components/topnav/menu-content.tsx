@@ -3,15 +3,9 @@ import MenuItem from "./menu-item";
 
 type MenuContentProps = {
   links: Array<{ title: string; href: string }>;
-  onTransitionComplete: () => void;
-  onLinkClick: () => void;
 };
 
-export default function MenuContent({
-  links,
-  onTransitionComplete,
-  onLinkClick,
-}: MenuContentProps) {
+export default function MenuContent({ links }: MenuContentProps) {
   const containerVariants = {
     initial: {
       transition: {
@@ -34,16 +28,11 @@ export default function MenuContent({
       initial="initial"
       animate="open"
       exit="initial"
-      className="flex h-full min-h-fit flex-col items-center justify-center gap-2 md:gap-8"
+      className="flex h-full min-h-fit flex-col items-center justify-center gap-5 md:gap-8"
     >
       {links.map((link, index) => (
         <div key={index} className="overflow-hidden">
-          <MenuItem
-            href={link.href}
-            title={link.title}
-            onTransitionComplete={onTransitionComplete}
-            onLinkClick={onLinkClick}
-          />
+          <MenuItem href={link.href} title={link.title} />
         </div>
       ))}
     </motion.div>
