@@ -1,5 +1,10 @@
 import React from "react";
+import DashboardLayout from "./layout";
 
 export default function DashboardPage() {
-  return <div></div>;
+  return (
+    <DashboardLayout>
+      <div className="p-24 text-white">Dashboard</div>
+    </DashboardLayout>
+  );
 }
